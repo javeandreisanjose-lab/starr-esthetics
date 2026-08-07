@@ -111,6 +111,56 @@
   }
   .about-text p{margin-bottom:16px;color:#3d463b;}
 
+  .about-detail{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    margin-top:56px;
+    padding-top:48px;
+    border-top:1px solid var(--line);
+  }
+  .about-detail-col h3{
+    font-size:1.05rem;
+    margin-bottom:14px;
+    position:relative;
+    padding-bottom:12px;
+  }
+  .about-detail-col h3::after{
+    content:"";
+    display:block;
+    width:32px;height:2px;
+    background:var(--rose);
+    margin-top:12px;
+  }
+  .about-detail-col p{color:#3d463b;margin-bottom:14px;font-size:0.95rem;}
+  .about-list{list-style:none;}
+  .about-list li{
+    position:relative;
+    padding-left:18px;
+    margin-bottom:10px;
+    font-size:0.92rem;
+    color:#3d463b;
+  }
+  .about-list li::before{
+    content:"";
+    position:absolute;
+    left:0;top:0.55em;
+    width:6px;height:6px;
+    border-radius:50%;
+    background:var(--rose);
+  }
+  .about-closing{
+    margin-top:48px;
+    padding-top:32px;
+    border-top:1px solid var(--line);
+    font-family:'Fraunces', serif;
+    font-size:1.2rem;
+    font-weight:400;
+    color:var(--sage-deep);
+    line-height:1.5;
+    max-width:720px;
+  }
+
   /* SERVICES - menu style */
   .menu-list{list-style:none;}
   .menu-item{
@@ -147,6 +197,24 @@
   .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
   .contact-card h3{font-size:1rem;margin-bottom:8px;color:var(--sage-deep);}
   .contact-card p{color:#4b544a;font-size:0.95rem;}
+  .social-row{
+    display:flex;
+    gap:28px;
+    margin-top:40px;
+    padding-top:32px;
+    border-top:1px solid var(--line);
+  }
+  .social-link{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+    color:var(--sage-deep);
+    font-size:0.9rem;
+    transition:color 0.2s ease;
+  }
+  .social-link:hover{color:var(--rose);}
+  .social-link svg{flex-shrink:0;}
   footer{
     border-top:1px solid var(--line);
     padding:28px 0;
@@ -159,6 +227,7 @@
     .nav-links{display:none;}
     .hero h1{font-size:2.2rem;}
     .about-grid{grid-template-columns:1fr;}
+    .about-detail{grid-template-columns:1fr;gap:32px;}
     .contact-grid{grid-template-columns:1fr;}
     .menu-item{flex-direction:column;align-items:flex-start;}
     .menu-item-right{align-self:flex-start;}
@@ -205,10 +274,46 @@
     <div class="photo-placeholder">Add your photo here</div>
     <div class="about-text">
       <div class="eyebrow">About the Studio</div>
-      <h2>Hi, welcome to Starr Esthetics</h2>
-      <p>[Add a short paragraph here about you — your background, training, and what clients can expect at their first visit.]</p>
-      <p>[Add a second paragraph about your approach to skincare — e.g. what products or techniques you use, and who your treatments are best for.]</p>
+      <h2>Hi, I'm Arrian</h2>
+      <p>A licensed esthetician passionate about helping clients achieve healthy, radiant skin through customized, results-driven treatments in a relaxing environment. My goal is to provide every client with personalized care, education, and a spa experience that leaves them feeling refreshed and confident.</p>
+      <p>At your first visit, we'll begin with a detailed skin consultation to discuss your skin concerns, goals, lifestyle, and current skincare routine. I'll evaluate your skin and create a treatment plan tailored specifically to your needs. Whether you're looking to improve acne, brighten your complexion, reduce signs of aging, or simply relax, every facial is customized just for you.</p>
     </div>
+  </div>
+
+  <div class="wrap about-detail">
+    <div class="about-detail-col">
+      <h3>My Approach to Skincare</h3>
+      <p>I believe that every person's skin is unique, which is why I customize every treatment based on your skin type and concerns. My focus is on improving your skin's health while delivering a relaxing and rejuvenating experience.</p>
+      <p>I use professional DBH (Dermaesthetics Beverly Hills) skincare products to cleanse, exfoliate, hydrate, and nourish the skin. For advanced treatments, I incorporate Rejuran during nano needling to help improve skin texture, hydration, elasticity, and overall skin rejuvenation.</p>
+    </div>
+
+    <div class="about-detail-col">
+      <h3>My Services May Include</h3>
+      <ul class="about-list">
+        <li>Customized facials using professional DBH skincare products</li>
+        <li>Nano Needling with Rejuran to enhance product absorption and promote smoother, healthier-looking skin</li>
+        <li>Microdermabrasion to gently exfoliate dead skin cells, improve skin texture, and reveal a brighter complexion</li>
+        <li>Gentle extractions (when appropriate)</li>
+        <li>Hydrating and calming masks</li>
+        <li>Targeted serums and moisturizers selected for your skin's specific needs</li>
+      </ul>
+    </div>
+
+    <div class="about-detail-col">
+      <h3>My Treatments Are Ideal For Clients Looking To Improve</h3>
+      <ul class="about-list">
+        <li>Fine lines and early signs of aging</li>
+        <li>Dull or dehydrated skin</li>
+        <li>Uneven skin tone and texture</li>
+        <li>Hyperpigmentation and sun damage</li>
+        <li>Mild acne and post-acne marks</li>
+        <li>Overall skin health and radiance</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p class="about-closing">My goal is to help you achieve beautiful, healthy skin through consistent care, professional products, and personalized treatment plans while providing a relaxing spa experience you'll look forward to every visit.</p>
   </div>
 </section>
 
@@ -285,6 +390,17 @@
         <h3>Phone / Email</h3>
         <p>[Add your phone number]<br>[Add your email address]</p>
       </div>
+    </div>
+
+    <div class="social-row">
+      <a href="https://www.instagram.com/starr.esthetics/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+        <span>@starresthetics</span>
+      </a>
+      <a href="#" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 8h-2a2 2 0 0 0-2 2v2H9v3h2v7h3v-7h2.2l.5-3H14v-1.5a.5.5 0 0 1 .5-.5H16V8Z"/></svg>
+        <span>[Add Facebook link]</span>
+      </a>
     </div>
   </div>
 </section>
